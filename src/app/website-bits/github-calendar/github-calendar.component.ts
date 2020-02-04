@@ -15,7 +15,7 @@ export class GithubCalendarComponent extends ContributionChartComponent implemen
       'https://github.com/laurentlaurent',
       '<img src="http://ghchart.rshah.org/laurentlaurent" alt="laurentlaurent\'s github chart"/>',
       'Github Calendar from rshah. (Github link: https://github.com/2016rshah/githubchart-api)');
-    // this.addChart(this);
+
   }
 
   ngOnInit() {

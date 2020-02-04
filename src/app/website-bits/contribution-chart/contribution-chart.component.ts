@@ -5,20 +5,18 @@ import {Component, OnInit} from '@angular/core';
   templateUrl: './contribution-chart.component.html',
   styleUrls: ['./contribution-chart.component.css']
 })
-export class ContributionChartComponent implements OnInit {
-  charts: ContributionChartComponent[];
-  sectionName;
-  profileLink;
-  chartAPI;
-  chartCredits;
 
-  // constructor() {
-  // }
-  constructor(sectionName: string, profileLink: string, chartAPI: string, chartCredit: string) {
-    this.sectionName = sectionName;
-    this.profileLink = profileLink;
-    this.chartAPI = chartAPI;
-    this.chartCredits = chartCredit;
+export class ContributionChartComponent implements OnInit {
+  sectionName: string;
+  profileLink: string;
+  chartAPI: string;
+  chartCredits: string;
+
+  constructor(theSectionName: string, theProfileLink: string, theChartAPI: string, theChartCredit: string) {
+    this.sectionName = theSectionName;
+    this.profileLink = theProfileLink;
+    this.chartAPI = theChartAPI;
+    this.chartCredits = theChartCredit;
   }
 
   ngOnInit() {
@@ -45,10 +43,6 @@ export class ContributionChartComponent implements OnInit {
 
   hookGithubLink(chart: string) {
     return '<a href"' + this.profileLink + '">' + chart + '</a>';
-  }
-
-  addChart(chart: ContributionChartComponent) {
-    this.charts.push(chart);
   }
 
 
