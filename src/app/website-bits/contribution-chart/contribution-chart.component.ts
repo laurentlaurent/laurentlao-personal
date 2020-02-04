@@ -14,7 +14,7 @@ export class ContributionChartComponent implements OnInit {
 
   // constructor() {
   // }
-  constructor(sectionName?: string, profileLink?: string, chartAPI?: string, chartCredit?: string) {
+  constructor(sectionName: string, profileLink: string, chartAPI: string, chartCredit: string) {
     this.sectionName = sectionName;
     this.profileLink = profileLink;
     this.chartAPI = chartAPI;
