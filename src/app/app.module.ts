@@ -8,6 +8,7 @@ import {TestPageComponent} from './website-pages/test-page/test-page.component';
 import {MenuBarComponent} from './website-bars/menu-bar/menu-bar.component';
 import {FooterBarComponent} from './website-bars/footer-bar/footer-bar.component';
 import { ContributionChartViewerComponent } from './website-bits/contribution-chart-viewer/contribution-chart-viewer.component';
+import { WorkexperienceViewerComponent } from './website-bits/workexperience-viewer/workexperience-viewer.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ContributionChartViewerComponent } from './website-bits/contribution-ch
     MenuBarComponent,
     FooterBarComponent,
     ContributionChartViewerComponent,
+    WorkexperienceViewerComponent,
   ],
   imports: [
     BrowserModule,
