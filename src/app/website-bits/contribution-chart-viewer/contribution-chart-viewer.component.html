@@ -1,0 +1,10 @@
+<p>contribution chart viewer works!</p>
+
+<div class="contribution-viewer" *ngFor="let chart of charts">
+
+  <h3 class="bit-contribution-title">
+    {{chart.getName()}}
+  </h3>
+
+  <div [innerHTML]=chart.generateCalendar() class="bit-graph"></div>
+</div>
