@@ -5,7 +5,7 @@ import {ArrayType} from '@angular/compiler';
 @Component({
   selector: 'app-contribution-chart-viewer',
   templateUrl: './contribution-chart-viewer.component.html',
-  styleUrls: ['./contribution-chart-viewer.component.css']
+  styleUrls: ['./contribution-chart-viewer.component.scss']
 })
 export class ContributionChartViewerComponent implements OnInit {
   charts: ContributionChart[] = [];
