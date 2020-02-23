@@ -1,1 +1,29 @@
-<p>workexperience-viewer works!</p>
+<div class="work-experience" *ngFor="let experience of workExperiences">
+  <div class="work-experience-section-name">Position</div>
+    <div class="work-experience-position">{{experience.positionName}}</div>
+  <div class="work-experience-section-name">Company</div>
+    <div class="work-experience-company">{{experience.companyName}}</div>
+  <div class="work-experience-section-name">Start Date</div>
+    <div class="work-experience-start-date">{{experience.startDate}}</div>
+  <div class="work-experience-section-name">End Date</div>
+    <div class="work-experience-end-date">{{experience.endDate}}</div>
+  <div class="work-experience-section-name">Summary</div>
+    <div class="work-experience-summary">{{experience.summary}}</div>
+
+  <div *ngIf="experience.tasks">
+    <div class="work-experience-section-name">Tasks</div>
+    <ul class="work-experience-task-list">
+      <li *ngFor="let task of experience.tasks">
+        <div class="work-experience-task-element">{{task}}</div>
+      </li>
+    </ul>
+  </div>
+  <div *ngIf="experience.skills">
+    <div class="work-experience-section-name">Skills applied</div>
+      <ul class="work-experience-skill-list">
+        <li *ngFor="let skill of experience.skills">
+          <div class="work-experience-skill-element">{{skill}}</div>
+        </li>
+      </ul>
+    </div>
+</div>
