@@ -5,7 +5,10 @@
   "projects": {
     "laurentlao-personal": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "styleext": "scss"}
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -126,10 +129,5 @@
       }
     }
   },
-  "defaultProject": "laurentlao-personal",
-  "schematics": {
-    "@schematics/angular:component": {
-      "styleext": "scss"
-    }
-  }
+  "defaultProject": "laurentlao-personal"
 }

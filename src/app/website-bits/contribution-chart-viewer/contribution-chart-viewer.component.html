@@ -1,8 +1,11 @@
 <div class="contribution-viewer" *ngFor="let chart of charts">
 
   <h3 class="bit-contribution-title">
-    {{chart.getName()}}
+    {{chart.theSectionName}}
   </h3>
 
-  <div [innerHTML]=chart.generateCalendar() class="bit-graph"></div>
+  <a [href]=chart.theProfileLink>
+    <div [innerHTML]=chart.theChartAPI class="bit-graph"></div>
+  </a>
+
 </div>

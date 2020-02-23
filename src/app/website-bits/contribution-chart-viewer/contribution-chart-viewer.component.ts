@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {ContributionChart} from '../contribution-chart';
+import { ContributionChart} from '../../interface-types/contribution-chart';
+import { CONTRIBUTION_CHARTS} from '../../content/ContributionCharts/ContributionCharts.content';
 import {ArrayType} from '@angular/compiler';
 
 @Component({
@@ -8,22 +9,13 @@ import {ArrayType} from '@angular/compiler';
   styleUrls: ['./contribution-chart-viewer.component.scss']
 })
 export class ContributionChartViewerComponent implements OnInit {
-  charts: ContributionChart[] = [];
+  charts: ContributionChart[];
 
   constructor() {
+    this.charts = CONTRIBUTION_CHARTS;
   }
 
   ngOnInit() {
-    this.addChart(
-      'GitHub Calendar',
-      'https://github.com/laurentlaurent',
-      '<img src="http://ghchart.rshah.org/laurentlaurent" alt="laurentlaurent\'s github chart"/>',
-      'Github Calendar from rshah. (Github link: https://github.com/2016rshah/githubchart-api)'
-    );
-  }
-
-  addChart(sectionName: string, profileLink: string, chartAPI: string, chartCredits: string) {
-    this.charts.push(new ContributionChart(sectionName, profileLink, chartAPI, chartCredits));
   }
 
 }
